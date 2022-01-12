@@ -2,11 +2,15 @@ package com.olamachia.simpleblogapp.view.posts_list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.olamachia.simpleblogapp.R
 import com.olamachia.simpleblogapp.model.domain.Post
 import com.olamachia.simpleblogapp.util.DataState
+import com.olamachia.simpleblogapp.util.Utils
 import com.olamachia.simpleblogapp.viewmodels.BlogPostsViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -15,6 +19,10 @@ class BlogPostsActivity : AppCompatActivity() {
     private val posts = ArrayList<Post>()
     private val blogPostViewModel: BlogPostsViewModel by viewModel()
     private lateinit var postsAdapter: BlogPostsAdapter
+    private lateinit var fabAddPost: FloatingActionButton
+    private lateinit var postsRecyclerView: RecyclerView
+    private lateinit var postSearchView: SearchView
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +38,7 @@ class BlogPostsActivity : AppCompatActivity() {
 
         // Add New Post
         fabAddPost.setOnClickListener {
-            AddPostDialogFragment().show(supportFragmentManager, "ADD POST")
+            Fragment_add_posts_dialog().show(supportFragmentManager, "ADD POST")
         }
 
         // SearchPosts

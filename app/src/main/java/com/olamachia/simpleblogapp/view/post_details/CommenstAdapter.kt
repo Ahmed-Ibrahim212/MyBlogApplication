@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.olamachia.simpleblogapp.R
 import com.olamachia.simpleblogapp.model.domain.Comment
 import java.util.*
 
@@ -13,9 +15,9 @@ class CommentsAdapter(private val context: Context, private val list: List<Comme
 
         fun bind(comment: Comment) {
 
-            itemView.userName.text = comment.name.capitalize(Locale.ROOT)
-            itemView.userEmail.text = comment.email
-            itemView.commentBody.text = comment.body
+            itemView.findViewById<TextView>(R.id.userName).text = comment.name.capitalize(Locale.ROOT)
+            itemView.findViewById<TextView>(R.id.userEmail).text = comment.email
+            itemView.findViewById<TextView>(R.id.commentBody).text = comment.body
         }
     }
 
