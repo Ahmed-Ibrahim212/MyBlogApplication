@@ -1,10 +1,12 @@
-package com.olamachia.simpleblogapp.model.domain
+package com.olamachia.simpleblogapp.model
 
 import android.util.Log
 import com.olamachia.simpleblogapp.api.PostService
 import com.olamachia.simpleblogapp.cache.CacheDao
 import com.olamachia.simpleblogapp.cache.CommentCacheMapper
 import com.olamachia.simpleblogapp.cache.PostCacheMapper
+import com.olamachia.simpleblogapp.model.domain.Comment
+import com.olamachia.simpleblogapp.model.domain.Post
 import com.olamachia.simpleblogapp.model.remote.CommentNetworkMapper
 import com.olamachia.simpleblogapp.model.remote.PostNetworkMapper
 import com.olamachia.simpleblogapp.util.DataState
@@ -20,6 +22,7 @@ constructor(
     private val commentCacheMapper: CommentCacheMapper,
     private val commentNetworkMapper: CommentNetworkMapper
 ) {
+
     suspend fun getPosts() : Flow<DataState<List<Post>>> = flow {
         emit(DataState.loading())
         try {
@@ -81,4 +84,3 @@ constructor(
         }
     }
 }
-

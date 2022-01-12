@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.olamachia.simpleblogapp.model.MainRepository
 import com.olamachia.simpleblogapp.model.domain.Comment
 import com.olamachia.simpleblogapp.model.domain.MainRepository
 import com.olamachia.simpleblogapp.util.DataState
