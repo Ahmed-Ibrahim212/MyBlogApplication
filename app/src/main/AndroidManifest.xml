@@ -10,14 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleBlogApp">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".view.post_details.PostDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.posts_list.BlogPostsActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".mvvm.ui.MVVMActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

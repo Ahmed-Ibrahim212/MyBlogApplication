@@ -13,4 +13,24 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Divider">
+        <item name="android:background">@color/grey_800</item>
+    </style>
+
+    <style name="SubtitleTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/grey_900</item>
+    </style>
+
+    <style name="SmallTextAppearance" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="AppTheme.Title.Collapsed" parent="android:TextAppearance">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.Title.Expanded" parent="android:TextAppearance">
+        <item name="android:textSize">48sp</item>
+    </style>
 </resources>
