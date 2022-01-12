@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.olamachia.simpleblogapp.R
 import com.olamachia.simpleblogapp.model.domain.Comment
@@ -22,6 +23,7 @@ class PostDetailActivity : AppCompatActivity() {
     private lateinit var commentsProgressBar: ProgressBar
     private lateinit var tvPostTitle: TextView
     private lateinit var tvPostBody: TextView
+    private lateinit var fabAddComment: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

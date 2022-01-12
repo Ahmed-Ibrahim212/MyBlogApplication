@@ -38,7 +38,7 @@ class BlogPostsActivity : AppCompatActivity() {
 
         // Add New Post
         fabAddPost.setOnClickListener {
-            Fragment_add_posts_dialog().show(supportFragmentManager, "ADD POST")
+            AddPostDialogFragment().show(supportFragmentManager, "ADD POST")
         }
 
         // SearchPosts
@@ -81,7 +81,7 @@ class BlogPostsActivity : AppCompatActivity() {
         if (msg != null) {
             text.text = msg
         }
-        text.text = getString(R.string.error_text)
+        text.text =  getString(R.string.error_text)
     }
 
 }
