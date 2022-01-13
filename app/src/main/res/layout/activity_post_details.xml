@@ -22,19 +22,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="15dp"
+            android:textColor="@color/white"
             android:textSize="23sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            tools:text="Whatever it takes, lets do this thing right now or never"/>
+            tools:text="Whatever it takes, lets do this thing right now or never" />
 
         <TextView
             android:id="@+id/tvPostBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:textSize="18sp"
             android:textColor="@color/white"
-            tools:text="Whatever it takes, lets do this thing right now or never,  lets do this thing right now or never lets do this thing right now or never"/>
+            android:textSize="18sp"
+            tools:text="Whatever it takes, lets do this thing right now or never,  lets do this thing right now or never lets do this thing right now or never" />
 
     </LinearLayout>
 
@@ -60,13 +60,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:background="@color/teal_200"
         android:layout_marginBottom="70dp"
+        android:background="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comments"
-        tools:listitem="@layout/item_list_comments"/>
+        tools:listitem="@layout/item_list_comments" />
 
     <ProgressBar
         android:id="@+id/commentsProgressBar"
@@ -83,9 +83,8 @@
         android:id="@+id/fabAddComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/grey_800"
         android:text="@string/add_comment"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
