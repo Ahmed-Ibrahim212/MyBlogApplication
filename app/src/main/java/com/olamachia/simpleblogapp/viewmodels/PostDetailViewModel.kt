@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.olamachia.simpleblogapp.model.MainRepository
 import com.olamachia.simpleblogapp.model.domain.Comment
-import com.olamachia.simpleblogapp.model.domain.MainRepository
 import com.olamachia.simpleblogapp.util.DataState
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 
@@ -21,13 +21,14 @@ class PostDetailViewModel constructor(private val mainRepository: MainRepository
     val commentPostData: LiveData<DataState<List<Comment>>>
         get() = _commentPostData
 
-    fun getComments() {
-        viewModelScope.launch {
-            mainRepository.getComments().collect {
-                _commentData.value = it
-            }
-        }
-    }
+//    @InternalCoroutinesApi
+//    fun getComments() {
+//        viewModelScope.launch {
+//            mainRepository.getComments().collect(
+//                _commentData.value = it
+//            )
+//        }
+//    }
 
     fun getPostComments(postId: Int) {
         viewModelScope.launch {

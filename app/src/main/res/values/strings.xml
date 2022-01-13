@@ -2,9 +2,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_comment">add_comments</string>
-    <string name="app_name">app_name</string>
+    <string name="app_name">SimpleBlogApp</string>
     <string name="create_new_post">Create New Post</string>
     <string name="post_btn">Post</string>
     <string name="title">Title</string>
     <string name="error_text">Oops! 😰 Unable to connect to network. Make sure your internet is turned on, then restart your app</string>
+    <string name="comments">Comments</string>
+    <string name="add_post">Add post</string>
 </resources>

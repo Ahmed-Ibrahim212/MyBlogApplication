@@ -12,6 +12,7 @@ import com.olamachia.simpleblogapp.model.domain.Post
 import com.olamachia.simpleblogapp.util.DataState
 import com.olamachia.simpleblogapp.util.Utils
 import com.olamachia.simpleblogapp.viewmodels.BlogPostsViewModel
+import kotlinx.android.synthetic.main.activity_blog_posts.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BlogPostsActivity : AppCompatActivity() {
@@ -19,10 +20,6 @@ class BlogPostsActivity : AppCompatActivity() {
     private val posts = ArrayList<Post>()
     private val blogPostViewModel: BlogPostsViewModel by viewModel()
     private lateinit var postsAdapter: BlogPostsAdapter
-    private lateinit var fabAddPost: FloatingActionButton
-    private lateinit var postsRecyclerView: RecyclerView
-    private lateinit var postSearchView: SearchView
-    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

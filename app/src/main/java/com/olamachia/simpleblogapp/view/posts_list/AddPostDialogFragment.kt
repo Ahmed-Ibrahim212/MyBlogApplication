@@ -9,6 +9,7 @@ import androidx.fragment.app.DialogFragment
 import com.olamachia.simpleblogapp.R
 import com.olamachia.simpleblogapp.model.domain.Post
 import com.olamachia.simpleblogapp.viewmodels.BlogPostsViewModel
+import kotlinx.android.synthetic.main.fragment_add_posts_dialog.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddPostDialogFragment : DialogFragment() {

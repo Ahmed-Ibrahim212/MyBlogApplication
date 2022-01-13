@@ -23,7 +23,6 @@
             android:textColor="@color/teal_200"
             android:textSize="20sp"
             android:layout_marginStart="8dp"
-            android:textAppearance="@style/SubtitleTextAppearance"
             tools:text="Name" />
 
       <TextView
@@ -46,7 +45,7 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:textSize="17sp"
-           ndroid:textAppearance="@style/SmallTextAppearance"
+           android:layout_marginTop="8dp"
            tools:text="This is a comment body. Its length will determine the length of the post. To infinity and beyond!" />
 
 

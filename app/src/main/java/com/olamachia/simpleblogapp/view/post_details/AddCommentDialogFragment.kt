@@ -9,20 +9,16 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import com.olamachia.simpleblogapp.R
 import com.olamachia.simpleblogapp.model.domain.Comment
 import com.olamachia.simpleblogapp.viewmodels.PostDetailViewModel
+import kotlinx.android.synthetic.main.fragment_add_comment.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddCommentDialogFragment(private val postId: Int) : DialogFragment() {
 
-    private lateinit var buttonComment: Button
-    private lateinit var commenterName: Comment
-    private lateinit var emailAddress: TextView
-    private lateinit var newComment :TextView
-
-    private val addCommentViewModel by viewModels<PostDetailViewModel>()
+    private val addCommentViewModel by viewModel<PostDetailViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +44,7 @@ class AddCommentDialogFragment(private val postId: Int) : DialogFragment() {
             val id = 0
 
             if (name.isEmpty() || email.isEmpty() || body.isEmpty()){
-                commenterName.error = "Name Can't Be Empty"
+                commenterName. error = "Name Can't Be Empty"
                 emailAddress.error = "Email Can't Be Empty"
                 newComment.error = "Comment Can't Be Empty"
             } else {

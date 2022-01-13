@@ -2,6 +2,7 @@ package com.olamachia.simpleblogapp.view.post_details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Adapter
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.lifecycle.Observer
@@ -14,16 +15,15 @@ import com.olamachia.simpleblogapp.model.domain.Comment
 import com.olamachia.simpleblogapp.util.DataState
 import com.olamachia.simpleblogapp.util.Utils
 import com.olamachia.simpleblogapp.viewmodels.PostDetailViewModel
+import kotlinx.android.synthetic.main.activity_post_details.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PostDetailActivity : AppCompatActivity() {
 
     private var comments = listOf<Comment>()
     private val viewModel: PostDetailViewModel by viewModel()
     private lateinit var commentsAdapter: CommentsAdapter
-    private lateinit var commentsProgressBar: ProgressBar
-    private lateinit var tvPostTitle: TextView
-    private lateinit var tvPostBody: TextView
-    private lateinit var fabAddComment: FloatingActionButton
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

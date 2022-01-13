@@ -1,8 +1,10 @@
 package com.olamachia.simpleblogapp.cache
 
 import androidx.room.ColumnInfo
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Entity(tableName = "comments")
 data class CommentCacheEntity(
 
     @ColumnInfo(name = "postId")

@@ -1,5 +1,7 @@
 package com.olamachia.simpleblogapp.api
 
+import com.olamachia.simpleblogapp.model.remote.CommentNetworkEntity
+import com.olamachia.simpleblogapp.model.remote.PostRemoteEntity
 import retrofit2.http.GET
 import retrofit2.http.Path
 

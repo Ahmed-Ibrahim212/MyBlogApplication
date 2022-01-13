@@ -1,8 +1,7 @@
 package com.olamachia.simpleblogapp.cache
 
+import com.olamachia.simpleblogapp.model.domain.Comment
 import com.olamachia.simpleblogapp.util.EntityMapper
-import org.w3c.dom.Comment
-import org.w3c.dom.Entity
 
 class CommentCacheMapper: EntityMapper<CommentCacheEntity, Comment> {
 

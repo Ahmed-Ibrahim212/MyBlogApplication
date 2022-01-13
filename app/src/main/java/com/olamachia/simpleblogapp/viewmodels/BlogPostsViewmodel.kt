@@ -4,10 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.olamachia.simpleblogapp.model.domain.MainRepository
+import com.olamachia.simpleblogapp.model.MainRepository
 import com.olamachia.simpleblogapp.model.domain.Post
 import com.olamachia.simpleblogapp.util.DataState
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class BlogPostsViewModel constructor(private val mainRepository: MainRepository) : ViewModel() {
@@ -21,7 +22,6 @@ class BlogPostsViewModel constructor(private val mainRepository: MainRepository)
     init {
         fetchPosts()
     }
-
 
     fun fetchPosts() {
         viewModelScope.launch {
