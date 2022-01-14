@@ -9,14 +9,14 @@ data class PostCacheEntity(
 
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id")
-    var id: Int,
+    val id: Int,
 
     @ColumnInfo(name = "userId")
-    var userId: Int,
+    val userId: Int,
 
     @ColumnInfo(name = "title")
-    var title: String,
+    val title: String,
 
     @ColumnInfo(name = "body")
-    var body: String
+    val body: String
 )

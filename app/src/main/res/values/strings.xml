@@ -9,4 +9,5 @@
     <string name="error_text">Oops! 😰 Unable to connect to network. Make sure your internet is turned on, then restart your app</string>
     <string name="comments">Comments</string>
     <string name="add_post">Add post</string>
+    <string name="search_posts">Search Posts</string>
 </resources>

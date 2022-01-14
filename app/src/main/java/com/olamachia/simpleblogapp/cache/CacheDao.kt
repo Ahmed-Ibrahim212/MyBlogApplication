@@ -9,17 +9,17 @@ import androidx.room.Query
 interface CacheDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addPosts(postEntity: PostCacheEntity) : Long
+    suspend fun addPosts(postEntity: PostCacheEntity) : Long
 
-    @Query("SELECT * FROM posts ")
-    fun getPosts() : List<PostCacheEntity>
+    @Query("SELECT * FROM posts")
+    suspend fun getPosts() : List<PostCacheEntity>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addComment(commentEntity: CommentCacheEntity) : Long
+    suspend fun addComment(commentEntity: CommentCacheEntity) : Long
 
     @Query("SELECT * FROM comments")
-    fun getComments(): List<CommentCacheEntity>
+    suspend fun getComments(): List<CommentCacheEntity>
 
     @Query("SELECT * FROM comments WHERE postId = :postId")
-    fun getPostComments(postId: Int) : List<CommentCacheEntity>
+    suspend fun getPostComments(postId: Int) : List<CommentCacheEntity>
 }

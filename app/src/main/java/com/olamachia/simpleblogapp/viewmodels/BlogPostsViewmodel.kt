@@ -1,5 +1,6 @@
 package com.olamachia.simpleblogapp.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,7 +14,6 @@ import kotlinx.coroutines.launch
 
 class BlogPostsViewModel constructor(private val mainRepository: MainRepository) : ViewModel() {
 
-
     private val _dataState: MutableLiveData<DataState<List<Post>>> = MutableLiveData()
 
     val dataState: LiveData<DataState<List<Post>>>
@@ -26,6 +26,7 @@ class BlogPostsViewModel constructor(private val mainRepository: MainRepository)
     fun fetchPosts() {
         viewModelScope.launch {
             mainRepository.getPosts().collect {
+                Log.d("Posts Viewmodel", "fetchPosts: $it")
                 _dataState.value = it
             }
         }

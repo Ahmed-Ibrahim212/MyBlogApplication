@@ -2,6 +2,7 @@ package com.olamachia.simpleblogapp.view.posts_list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -58,6 +59,7 @@ class BlogPostsActivity : AppCompatActivity() {
                 DataState.Status.SUCCESS -> {
                     Utils.showProgressBar(progressBar, false)
                     result.data?.let { list ->
+                        Log.d("Posts List", "subscribeObservers: $list")
                         postsAdapter.updateData(list)
                     }
                 }
